@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "chatcli"
+version = "0.1.0"
+description = ""
+authors = ["Bryan Ehrlich <ehrlich.bryan@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.30.0"
+sseclient = "^0.0.27"
+python-dotenv = "^1.0.0"
+openai = "^0.27.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
