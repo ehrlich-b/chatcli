@@ -21,10 +21,10 @@ openai.api_key = API_KEY  # Set the API key for the OpenAI library
 
 messages = []
 
-def performRequestWithStreaming(model, prompt):
+def performRequestWithStreaming(model, messages):
     reqBody = {
         "model": model,
-        "messages": [{"role": "user", "content": prompt}],
+        "messages": messages,
         "stream": True,
     }
     response = openai.ChatCompletion.create(**reqBody)  # Use OpenAI library to make the API call
@@ -58,7 +58,7 @@ if __name__ == '__main__':
             text = input("Person> ")
             print("GPT> ", end="")
             messages.append({"role": "user", "content": text})
-            response = performRequestWithStreaming(model, text)
+            response = performRequestWithStreaming(model, messages)
             messages.append({"role": "system", "content": response})
         except EOFError:
             break
