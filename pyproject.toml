@@ -11,6 +11,8 @@ requests = "^2.30.0"
 sseclient = "^0.0.27"
 python-dotenv = "^1.0.0"
 openai = "^0.27.6"
+prompt-toolkit = "^3.0.38"
+rich = "^13.3.5"
 
 
 [build-system]
